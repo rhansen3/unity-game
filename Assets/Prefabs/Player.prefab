@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 197700199240101312}
   - component: {fileID: 3927895263846671799}
   - component: {fileID: 9189048363442037192}
+  - component: {fileID: 8474627897938024693}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -34,7 +35,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7120310436295890937
 SpriteRenderer:
@@ -191,3 +192,17 @@ MonoBehaviour:
   bulletStartDistance: 0.5
   bulletPrefab: {fileID: 7243384697389749894, guid: be1608d03217fbc48a94a2d2d1a9aa61, type: 3}
   canFire: 1
+--- !u!114 &8474627897938024693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680643103556134547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12a1fc6e9efc32f4c8a274e0b9653ac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lives: 3
+  uiCanvas: {fileID: 0}

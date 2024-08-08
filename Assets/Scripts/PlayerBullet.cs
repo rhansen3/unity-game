@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class bullet : MonoBehaviour
+public class PlayerBullet : MonoBehaviour
 {
 
     private float timeAlive = 0f;
