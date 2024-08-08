@@ -17,6 +17,9 @@ public class PlayerShooting : MonoBehaviour
         if(Input.GetButton("Fire1") && canFire){
             StartCoroutine(fireBullet());
         }
+    }
+
+    void FixedUpdate(){
         pointMouse();
     }
 
