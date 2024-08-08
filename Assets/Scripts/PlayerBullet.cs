@@ -8,9 +8,14 @@ public class PlayerBullet : MonoBehaviour
     private float timeAlive = 0f;
     public float maxSeconds = 20f;
     public float bulletDamage = 10f;
+    public PlayerScore playerScore;
+    public float bulletScore = 10f;
 
     void Start(){
         bulletDamage = 10f;
+        if(playerScore == null){
+            playerScore = GameObject.FindWithTag("Player").GetComponent<PlayerScore>();
+        }
     }
 
     // Update is called once per frame
@@ -30,7 +35,9 @@ public class PlayerBullet : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other){
         if(other.gameObject.tag == "Enemy"){
             other.gameObject.GetComponent<EnemyLifeManager>().takeDamage(bulletDamage);
+            playerScore.addScore(bulletScore);
             Destroy(gameObject);
         }
     }
+
 }
