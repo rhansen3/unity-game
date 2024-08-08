@@ -4,30 +4,33 @@ using UnityEngine;
 
 public class PlayerShooting : MonoBehaviour
 {
-
-    public float bulletSpeed = 10f;
-    public float fireRate = 0.3f;
-    public float bulletStartDistance = 0.5f;
-    public GameObject bulletPrefab;
     public bool canFire = true;
+    
+    // Each of the player's 4 guns
+    public GameObject Weapon1;
+    public GameObject Weapon2;
+    public GameObject Weapon3;
+    public GameObject Weapon4;
+
+    private float weapondelay = 0.05f;
 
     // Update is called once per frame
     void Update(){
         // Check if player is firing bullets
         if(Input.GetButton("Fire1") && canFire){
-            StartCoroutine(fireBullet());
+            StartCoroutine(fireWeapons());
         }
     }
 
-    // Fires a bullet from the player
-    IEnumerator fireBullet(){
-        // Disable firing to prevent shooting more than once
-        canFire = false;
-        // Instantiate new bullet prefab and give it initial velocity
-        GameObject newBullet = Instantiate(bulletPrefab, gameObject.transform.position + transform.up * bulletStartDistance, Quaternion.identity);
-        newBullet.GetComponent<Rigidbody2D>().velocity = transform.up * bulletSpeed;
-        // Wait fireRate seconds until able to shoot next bullet
-        yield return new WaitForSeconds(fireRate);
-        canFire = true;
+    // Fires each of the player's weapons
+    public IEnumerator fireWeapons(){
+        StartCoroutine(Weapon1.GetComponent<WeaponBehavior>().fireWeapon());
+        yield return new WaitForSeconds(weapondelay);
+        StartCoroutine(Weapon2.GetComponent<WeaponBehavior>().fireWeapon());
+        yield return new WaitForSeconds(weapondelay);
+        StartCoroutine(Weapon3.GetComponent<WeaponBehavior>().fireWeapon());
+        yield return new WaitForSeconds(weapondelay);
+        StartCoroutine(Weapon4.GetComponent<WeaponBehavior>().fireWeapon());
+        yield return new WaitForSeconds(weapondelay);
     }
 }

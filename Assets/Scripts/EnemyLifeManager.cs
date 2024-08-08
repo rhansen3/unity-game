@@ -11,7 +11,7 @@ public class EnemyLifeManager : MonoBehaviour
     public PlayerScore playerScore;
     public Material spritesDefaultMaterial;
     public Material spritesFlashMaterial;
-    private float damageFlashTime = 0.25f;
+    public float damageFlashTime = 0.15f;
     private float flashTimeStart;
     private bool flashingDamage = false;
 

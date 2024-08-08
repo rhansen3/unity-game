@@ -1,0 +1,22 @@
+{
+    "list": [
+        {
+            "id": 0,
+            "name": "Basic Gun",
+            "bulletSpeed": 10,
+            "fireRate": 0.3,
+            "bulletDamage": 10,
+            "bulletStartDistance": 0.5,
+            "fireFunction": "BasicGun"
+        },
+        {
+            "id": 1,
+            "name": "Pea Shooter",
+            "bulletSpeed": 20,
+            "fireRate": 0.1,
+            "bulletDamage": 5,
+            "bulletStartDistance": 0.5,
+            "fireFunction": "BasicGun"
+        }
+    ]
+}

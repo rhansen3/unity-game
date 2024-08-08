@@ -7,9 +7,9 @@ public class PlayerBullet : MonoBehaviour
 
     private float timeAlive = 0f;
     public float maxSeconds = 20f;
-    public float bulletDamage = 10f;
     public PlayerScore playerScore;
     public float bulletScore = 10f;
+    public float bulletDamage = 10f;
 
     void Start(){
         if(playerScore == null){

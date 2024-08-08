@@ -594,6 +594,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BasicEnemy
       objectReference: {fileID: 0}
+    - target: {fileID: 5137430097700574093, guid: fd6cc7479812758489bc21bd0bb3660d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5280261414079503981, guid: fd6cc7479812758489bc21bd0bb3660d, type: 3}
       propertyPath: playerScore
       value: 
