@@ -12,7 +12,6 @@ public class PlayerBullet : MonoBehaviour
     public float bulletScore = 10f;
 
     void Start(){
-        bulletDamage = 10f;
         if(playerScore == null){
             playerScore = GameObject.FindWithTag("Player").GetComponent<PlayerScore>();
         }
