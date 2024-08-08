@@ -19,10 +19,6 @@ public class PlayerShooting : MonoBehaviour
         }
     }
 
-    void FixedUpdate(){
-        pointMouse();
-    }
-
     // Fires a bullet from the player
     IEnumerator fireBullet(){
         // Disable firing to prevent shooting more than once
@@ -33,13 +29,5 @@ public class PlayerShooting : MonoBehaviour
         // Wait fireRate seconds until able to shoot next bullet
         yield return new WaitForSeconds(fireRate);
         canFire = true;
-    }
-
-    
-    // Point the player sprite towards the mouse
-    void pointMouse(){
-        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        mousePos.z = 0;
-        transform.rotation = Quaternion.LookRotation(Vector3.forward, mousePos - transform.position);
     }
 }
