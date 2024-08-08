@@ -6,18 +6,30 @@ public class PlayerShooting : MonoBehaviour
 {
 
     public float bulletSpeed = 5f;
-    public float fireRate = 1f;
+    public float fireRate = 0.5f;
+    public float bulletStartDistance = 0.5f;
     public GameObject bulletPrefab;
+    public bool canFire = true;
 
     // Update is called once per frame
-    void Update()
-    {
-        if(Input.GetButtonDown("Fire1")){
-            fireBullet();
+    void Update(){
+        // Check if player is firing bullets
+        if(Input.GetButton("Fire1") && canFire){
+            StartCoroutine(fireBullet());
         }
     }
 
-    void fireBullet(){
-        Instantiate(bulletPrefab, transform);
+    IEnumerator fireBullet(){
+        // Disable firing to prevent shooting more than once
+        canFire = false;
+        // Get the position for the bullet to spawn at
+        Vector3 newPosition = gameObject.transform.position;
+        newPosition += new Vector3(0, bulletStartDistance, 0);
+        // Instantiate new bullet prefab and give it initial velocity
+        GameObject newBullet = Instantiate(bulletPrefab, newPosition, Quaternion.identity);
+        newBullet.GetComponent<Rigidbody2D>().velocity = new Vector3(0, bulletSpeed, 0);
+        // Wait fireRate seconds until able to shoot next bullet
+        yield return new WaitForSeconds(fireRate);
+        canFire = true;
     }
 }
