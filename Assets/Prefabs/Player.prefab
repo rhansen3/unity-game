@@ -34,7 +34,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7120310436295890937
 SpriteRenderer:
@@ -186,6 +186,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f0e439c3d94ed440b271cdf83f75bd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletSpeed: 5
-  fireRate: 1
+  bulletSpeed: 10
+  fireRate: 0.3
+  bulletStartDistance: 0.5
   bulletPrefab: {fileID: 7243384697389749894, guid: be1608d03217fbc48a94a2d2d1a9aa61, type: 3}
+  canFire: 1
