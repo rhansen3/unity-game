@@ -10,25 +10,41 @@ public class LevelManager : MonoBehaviour
     public float enemySpawnDelay = 5f;
     public GameObject player;
     public Camera mainCamera;
-    public float spawnDistanceFromCameraEdge = 1f;
-    private bool levelEnded = false;
+    public float spawnDistanceFromCameraEdge = 10f;
+    public UIMenuManager uiMenuManager;
+    public bool levelEnded = false;
 
     // How many "death points" enemies need to contribute before level ends. Points assigned and managed by enemy objects
     public float levelMaxPoints = 100f;
     public float levelPoints = 0;
+    public GameObject winScreen;
+    public GameObject lossScreen;
 
     // Start is called before the first frame update
     void Start()
     {
+        Time.timeScale = 1;
         if(mainCamera == null){
             mainCamera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
+        }
+
+        if(uiMenuManager == null){
+            uiMenuManager = GameObject.FindWithTag("UICanvas").GetComponent<UIMenuManager>();
+        }
+
+        if(winScreen == null){
+            winScreen = GameObject.FindWithTag("WinScreen");
+        }
+
+        if(lossScreen == null){
+            lossScreen = GameObject.FindWithTag("LossScreen");
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(spawnEnemies && !levelEnded){
+        if(spawnEnemies){
             StartCoroutine(spawnEnemy());
         }
     }
@@ -40,8 +56,7 @@ public class LevelManager : MonoBehaviour
         GameObject enemyToSpawn = enemyTypes[UnityEngine.Random.Range(0, enemyTypes.Count)];
 
         // Find position to spawn using main camera
-        // Vector2 spawnPos = mainCamera.ViewportToWorldPoint(new Vector2(UnityEngine.Random.Range(0, 1), UnityEngine.Random.Range(0, 1)));
-        Vector2 spawnPos = mainCamera.ViewportToWorldPoint(new Vector2(0f, 0f));
+        Vector2 spawnPos = mainCamera.ViewportToWorldPoint(new Vector2(UnityEngine.Random.Range(0f, 1f), UnityEngine.Random.Range(0f, 1f)));
         // Move the object a little away from  the player at new position
         spawnPos = Vector2.MoveTowards(spawnPos, player.transform.position, -spawnDistanceFromCameraEdge);
 
@@ -58,9 +73,17 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-    // End the current level. If won == true, the player won. If false, player lost
-    public void endLevel(bool won){
+    // End the current level. If playerVictory == true, the player playerVictory. If false, player lost
+    public void endLevel(bool playerVictory){
         spawnEnemies = false;
         levelEnded = true;
+        uiMenuManager.gamePaused = true;
+        Time.timeScale = 0;
+        player.GetComponent<PlayerShooting>().canFire = false;
+        if(playerVictory){
+            winScreen.SetActive(true);
+        } else{
+            lossScreen.SetActive(true);
+        }
     }
 }

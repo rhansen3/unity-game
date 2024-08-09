@@ -123,6 +123,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &362918391 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 49380562965524358, guid: 3af643ed2272ecf44ae91db6ecdf4f2a, type: 3}
+  m_PrefabInstance: {fileID: 8388855333595152145}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27b0bc89be9533846a847081c440227b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -544,6 +555,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1338330771}
+    - target: {fileID: 3458959988299734285, guid: 9d6234f6d40682645a958baba768c947, type: 3}
+      propertyPath: levelManager
+      value: 
+      objectReference: {fileID: 362918391}
     - target: {fileID: 3820006772815490729, guid: 9d6234f6d40682645a958baba768c947, type: 3}
       propertyPath: player
       value: 
@@ -641,6 +656,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d6234f6d40682645a958baba768c947, type: 3}
+--- !u!114 &5214270371705546116 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3458959988299734285, guid: 9d6234f6d40682645a958baba768c947, type: 3}
+  m_PrefabInstance: {fileID: 5214270371705546114}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 631215218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab657f8d2e7036345ab73fe24f34594e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8388855333595152145
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -658,9 +684,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 519420031}
     - target: {fileID: 49380562965524358, guid: 3af643ed2272ecf44ae91db6ecdf4f2a, type: 3}
-      propertyPath: levelPoints
-      value: 99
-      objectReference: {fileID: 0}
+      propertyPath: uiMenuManager
+      value: 
+      objectReference: {fileID: 5214270371705546116}
+    - target: {fileID: 2017583828425935125, guid: 3af643ed2272ecf44ae91db6ecdf4f2a, type: 3}
+      propertyPath: uiMenuManager
+      value: 
+      objectReference: {fileID: 5214270371705546116}
     - target: {fileID: 3297416056794223692, guid: 3af643ed2272ecf44ae91db6ecdf4f2a, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -705,6 +735,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8258586522352668252, guid: 3af643ed2272ecf44ae91db6ecdf4f2a, type: 3}
+      propertyPath: uiMenuManager
+      value: 
+      objectReference: {fileID: 5214270371705546116}
     - target: {fileID: 8592350818075473638, guid: 3af643ed2272ecf44ae91db6ecdf4f2a, type: 3}
       propertyPath: m_Name
       value: LevelManager

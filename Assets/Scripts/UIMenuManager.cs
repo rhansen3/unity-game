@@ -11,50 +11,60 @@ public class UIMenuManager : MonoBehaviour
     public GameObject pauseMenu;
     public GameObject inventoryMenu;
     public GameObject player;
+    public LevelManager levelManager;
 
     void Start(){
         pauseMenu.SetActive(false);
         pauseMenuOpen = false;
         inventoryMenu.SetActive(false);
         inventoryMenuOpen = false;
+
+        if(levelManager == null){
+            levelManager = GameObject.FindWithTag("LevelManager").GetComponent<LevelManager>();
+        }
+        if(player == null){
+            player = GameObject.FindWithTag("Player");
+        }
 }
 
     // Update is called once per frame
     void Update()
     {
-        // Player opens/closes pause menu or closes inventory menu
-        if(Input.GetKeyDown(KeyCode.Escape)){
-            if(gamePaused){
-                unpauseGame();
-            } else{
-                pauseGame();
+        if(!levelManager.levelEnded){
+            // Player opens/closes pause menu or closes inventory menu
+            if(Input.GetKeyDown(KeyCode.Escape)){
+                if(gamePaused){
+                    unpauseGame();
+                } else{
+                    pauseGame();
+                }
+
+                if(pauseMenuOpen){
+                    pauseMenu.SetActive(false);
+                    pauseMenuOpen = false;
+                } else if(inventoryMenuOpen){
+                    inventoryMenu.SetActive(false);
+                    inventoryMenuOpen = false;
+                } else{
+                    pauseMenu.SetActive(true);
+                    pauseMenuOpen = true;
+                }
             }
 
-            if(pauseMenuOpen){
-                pauseMenu.SetActive(false);
-                pauseMenuOpen = false;
-            } else if(inventoryMenuOpen){
-                inventoryMenu.SetActive(false);
-                inventoryMenuOpen = false;
-            } else{
-                pauseMenu.SetActive(true);
-                pauseMenuOpen = true;
-            }
-        }
-
-        // Player opens/closes inventory menu
-        else if(Input.GetKeyDown(KeyCode.I) || Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Tab)){
-            if(gamePaused){
-                unpauseGame();
-            } else{
-                pauseGame();
-            }
-            if(inventoryMenuOpen){
-                inventoryMenu.SetActive(false);
-                inventoryMenuOpen = false;
-            } else if(!pauseMenuOpen){
-                inventoryMenu.SetActive(true);
-                inventoryMenuOpen = true;
+            // Player opens/closes inventory menu
+            else if(Input.GetKeyDown(KeyCode.I) || Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Tab)){
+                if(gamePaused){
+                    unpauseGame();
+                } else{
+                    pauseGame();
+                }
+                if(inventoryMenuOpen){
+                    inventoryMenu.SetActive(false);
+                    inventoryMenuOpen = false;
+                } else if(!pauseMenuOpen){
+                    inventoryMenu.SetActive(true);
+                    inventoryMenuOpen = true;
+                }
             }
         }
     }

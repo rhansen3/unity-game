@@ -1,9 +1,10 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
-public class PauseMenu : MonoBehaviour
+public class WinScreen : MonoBehaviour
 {
-    private Button _resumeButton;
+    private Button _restartButton;
     private Button _quitButton;
     public UIMenuManager uiMenuManager;
 
@@ -13,18 +14,17 @@ public class PauseMenu : MonoBehaviour
         // The UXML is already instantiated by the UIDocument component
         var uiDocument = GetComponent<UIDocument>();
 
-        _resumeButton = uiDocument.rootVisualElement.Q("resumeButton") as Button;
+        _restartButton = uiDocument.rootVisualElement.Q("restartButton") as Button;
         _quitButton = uiDocument.rootVisualElement.Q("quitButton") as Button;
 
-        _resumeButton.RegisterCallback<ClickEvent>(resumeGame);
+        _restartButton.RegisterCallback<ClickEvent>(restartGame);
         _quitButton.RegisterCallback<ClickEvent>(quitGame);
     }
 
-    private void resumeGame(ClickEvent evt)
+    private void restartGame(ClickEvent evt)
     {
-        uiMenuManager.unpauseGame();
-        uiMenuManager.pauseMenuOpen = false;
-        gameObject.SetActive(false);
+        int currentScene = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(currentScene);
     }
 
     private void quitGame(ClickEvent evt){

@@ -1,5 +1,129 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5765923971248213531
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1737718611430212073}
+  - component: {fileID: 4357711326573492959}
+  - component: {fileID: 8258586522352668252}
+  m_Layer: 5
+  m_Name: LossScreen
+  m_TagString: LossScreen
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1737718611430212073
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5765923971248213531}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 549.1343, y: 259.89398, z: 9.50291}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3297416056794223692}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4357711326573492959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5765923971248213531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PanelSettings: {fileID: 11400000, guid: 805ede3b3dcae9a4e8b3e397452c3d63, type: 2}
+  m_ParentUI: {fileID: 0}
+  sourceAsset: {fileID: 9197481963319205126, guid: 2ba7e85a3ea480d42805b886ca2133b5, type: 3}
+  m_SortingOrder: 0
+--- !u!114 &8258586522352668252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5765923971248213531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9cf76063fa1b4f4896f9047af75a6ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiMenuManager: {fileID: 0}
+--- !u!1 &8376174542869009868
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8972548860599759023}
+  - component: {fileID: 7524291889844814255}
+  - component: {fileID: 2017583828425935125}
+  m_Layer: 5
+  m_Name: WinScreen
+  m_TagString: WinScreen
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &8972548860599759023
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8376174542869009868}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 549.1343, y: 259.89398, z: 9.50291}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3297416056794223692}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7524291889844814255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8376174542869009868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PanelSettings: {fileID: 11400000, guid: 805ede3b3dcae9a4e8b3e397452c3d63, type: 2}
+  m_ParentUI: {fileID: 0}
+  sourceAsset: {fileID: 9197481963319205126, guid: 1c47439cdbc730c45a55bd3822709591, type: 3}
+  m_SortingOrder: 0
+--- !u!114 &2017583828425935125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8376174542869009868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b6386eb9e225dd49b859322660800f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiMenuManager: {fileID: 0}
 --- !u!1 &8592350818075473638
 GameObject:
   m_ObjectHideFlags: 0
@@ -28,7 +152,9 @@ Transform:
   m_LocalPosition: {x: 1.3657271, y: -0.39398167, z: -9.50291}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 8972548860599759023}
+  - {fileID: 1737718611430212073}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -47,9 +173,13 @@ MonoBehaviour:
   enemyTypes:
   - {fileID: 5137430097700574093, guid: fd6cc7479812758489bc21bd0bb3660d, type: 3}
   - {fileID: 5137430097700574093, guid: db9d5718125332a4b8731f710e3d42b0, type: 3}
-  enemySpawnDelay: 5
+  enemySpawnDelay: 3
   player: {fileID: 0}
   mainCamera: {fileID: 0}
-  spawnDistanceFromCameraEdge: 5
+  spawnDistanceFromCameraEdge: 10
+  uiMenuManager: {fileID: 0}
+  levelEnded: 0
   levelMaxPoints: 100
   levelPoints: 0
+  winScreen: {fileID: 8376174542869009868}
+  lossScreen: {fileID: 5765923971248213531}
