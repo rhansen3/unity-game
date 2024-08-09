@@ -246,6 +246,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 823319290608603605, guid: 9d6234f6d40682645a958baba768c947, type: 3}
   m_PrefabInstance: {fileID: 5214270371705546114}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &999610855 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1877522948766636533, guid: 9d6234f6d40682645a958baba768c947, type: 3}
+  m_PrefabInstance: {fileID: 5214270371705546114}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 820557c3cdd66dd4e8ddff71295875ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1312201285 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7749281577607381337, guid: 9d6234f6d40682645a958baba768c947, type: 3}
@@ -409,6 +420,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2537410851848991031, guid: eab5f5559580d6a40963d3f4cf522837, type: 3}
+      propertyPath: m_RotationOffsets.Array.data[0].x
+      value: -90
+      objectReference: {fileID: 0}
     - target: {fileID: 2537410851848991031, guid: eab5f5559580d6a40963d3f4cf522837, type: 3}
       propertyPath: m_Sources.Array.data[0].sourceTransform
       value: 
@@ -687,6 +702,10 @@ PrefabInstance:
       propertyPath: uiMenuManager
       value: 
       objectReference: {fileID: 5214270371705546116}
+    - target: {fileID: 49380562965524358, guid: 3af643ed2272ecf44ae91db6ecdf4f2a, type: 3}
+      propertyPath: levelProgressBar
+      value: 
+      objectReference: {fileID: 999610855}
     - target: {fileID: 2017583828425935125, guid: 3af643ed2272ecf44ae91db6ecdf4f2a, type: 3}
       propertyPath: uiMenuManager
       value: 

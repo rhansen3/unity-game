@@ -12,6 +12,7 @@ TagManager:
   - LevelManager
   - WinScreen
   - LossScreen
+  - LevelBar
   layers:
   - Default
   - TransparentFX

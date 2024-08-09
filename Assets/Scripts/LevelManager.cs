@@ -20,6 +20,8 @@ public class LevelManager : MonoBehaviour
     public GameObject winScreen;
     public GameObject lossScreen;
 
+    public ProgressBar levelProgressBar;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,6 +41,11 @@ public class LevelManager : MonoBehaviour
         if(lossScreen == null){
             lossScreen = GameObject.FindWithTag("LossScreen");
         }
+
+        if(levelProgressBar == null){
+            levelProgressBar = GameObject.FindWithTag("LevelBar").GetComponent<ProgressBar>();
+        }
+        levelProgressBar.maxValue = levelMaxPoints;
     }
 
     // Update is called once per frame
@@ -68,6 +75,7 @@ public class LevelManager : MonoBehaviour
 
     public void addLevelPoints(float points){
         levelPoints += points;
+        levelProgressBar.changeProgressBarVal(levelPoints);
         if(levelPoints >= levelMaxPoints){
             endLevel(true);
         }
