@@ -193,6 +193,7 @@ MonoBehaviour:
   spritesDefaultMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   spritesFlashMaterial: {fileID: 2100000, guid: 9812ae6a7216b1142877feaa5d6d292f, type: 2}
   damageFlashTime: 0.15
+  levelPointsOnDeath: 8
 --- !u!114 &7554405403393213708
 MonoBehaviour:
   m_ObjectHideFlags: 0

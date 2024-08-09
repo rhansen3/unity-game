@@ -14,12 +14,17 @@ public class EnemyLifeManager : MonoBehaviour
     public float damageFlashTime = 0.15f;
     private float flashTimeStart;
     private bool flashingDamage = false;
+    LevelManager levelManager;
+    public float levelPointsOnDeath = 5f;
 
     // Start is called before the first frame update
     void Start()
     {
         if(playerScore == null){
             playerScore = GameObject.FindWithTag("Player").GetComponent<PlayerScore>();
+        }
+        if(levelManager == null){
+            levelManager = GameObject.FindWithTag("LevelManager").GetComponent<LevelManager>();
         }
         if(spritesDefaultMaterial == null){
             Debug.LogError("No default sprite material set for enemy damage flash");
@@ -47,6 +52,7 @@ public class EnemyLifeManager : MonoBehaviour
 
     public void enemyDeath(){
         playerScore.addScore(enemyDeathScore);
+        levelManager.addLevelPoints(levelPointsOnDeath);
         Destroy(gameObject);
     }
 

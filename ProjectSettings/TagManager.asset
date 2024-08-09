@@ -9,6 +9,7 @@ TagManager:
   - UICanvas
   - PlayerBullet
   - EnemyBullet
+  - LevelManager
   layers:
   - Default
   - TransparentFX

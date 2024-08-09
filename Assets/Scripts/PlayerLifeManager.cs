@@ -9,10 +9,14 @@ public class PlayerLifeManager : MonoBehaviour
     public int lives = 3;
 
     public GameObject uiCanvas;
+    public LevelManager levelManager;
 
     void Start(){
         if(uiCanvas == null){
             uiCanvas = GameObject.FindWithTag("UICanvas");
+        }
+        if(levelManager == null){
+            levelManager = GameObject.FindWithTag("LevelManager").GetComponent<LevelManager>();
         }
         for(int i = 1; i <= lives; i++){
             uiCanvas.GetComponent<CanvasLifeManager>().gainLife();
@@ -31,7 +35,12 @@ public class PlayerLifeManager : MonoBehaviour
     }
 
     public void loseLife(){
-        lives--;
-        uiCanvas.GetComponent<CanvasLifeManager>().loseLife();
+        // If player has lost their final life, end the level in a loss
+        if(lives <= 0){
+            levelManager.endLevel(false);
+        } else{
+            lives--;
+            uiCanvas.GetComponent<CanvasLifeManager>().loseLife();
+        }
     }
 }

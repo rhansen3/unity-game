@@ -172,7 +172,7 @@ RectTransform:
   - {fileID: 5179095855646947518}
   - {fileID: 810039906720233682}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -283,6 +283,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 810039906720233682}
+  - component: {fileID: 1399156443097737044}
+  - component: {fileID: 402302160331233135}
   m_Layer: 5
   m_Name: PauseMenu
   m_TagString: Untagged
@@ -305,6 +307,35 @@ Transform:
   m_Father: {fileID: 4257283734028900748}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1399156443097737044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1750164073587986956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PanelSettings: {fileID: 11400000, guid: 805ede3b3dcae9a4e8b3e397452c3d63, type: 2}
+  m_ParentUI: {fileID: 0}
+  sourceAsset: {fileID: 9197481963319205126, guid: db546b6b27355244f80ab51a475ad13a, type: 3}
+  m_SortingOrder: 0
+--- !u!114 &402302160331233135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1750164073587986956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4abb76308709ab6438a3e08af9a3fe82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiMenuManager: {fileID: 3458959988299734285}
 --- !u!1 &6734799300207098184
 GameObject:
   m_ObjectHideFlags: 0

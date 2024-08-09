@@ -11,9 +11,11 @@ public class LevelManager : MonoBehaviour
     public GameObject player;
     public Camera mainCamera;
     public float spawnDistanceFromCameraEdge = 1f;
+    private bool levelEnded = false;
 
-    // Value should ideally cause enemies to spawn directly off-screen
-    private float enemySpawnDistance;
+    // How many "death points" enemies need to contribute before level ends. Points assigned and managed by enemy objects
+    public float levelMaxPoints = 100f;
+    public float levelPoints = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -26,7 +28,7 @@ public class LevelManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(spawnEnemies){
+        if(spawnEnemies && !levelEnded){
             StartCoroutine(spawnEnemy());
         }
     }
@@ -38,7 +40,8 @@ public class LevelManager : MonoBehaviour
         GameObject enemyToSpawn = enemyTypes[UnityEngine.Random.Range(0, enemyTypes.Count)];
 
         // Find position to spawn using main camera
-        Vector2 spawnPos = mainCamera.ViewportToWorldPoint(new Vector2(UnityEngine.Random.Range(0, 1), UnityEngine.Random.Range(0, 1)));
+        // Vector2 spawnPos = mainCamera.ViewportToWorldPoint(new Vector2(UnityEngine.Random.Range(0, 1), UnityEngine.Random.Range(0, 1)));
+        Vector2 spawnPos = mainCamera.ViewportToWorldPoint(new Vector2(0f, 0f));
         // Move the object a little away from  the player at new position
         spawnPos = Vector2.MoveTowards(spawnPos, player.transform.position, -spawnDistanceFromCameraEdge);
 
@@ -46,5 +49,18 @@ public class LevelManager : MonoBehaviour
         GameObject newEnemy = Instantiate(enemyToSpawn, spawnPos, Quaternion.identity);
         yield return new WaitForSeconds(enemySpawnDelay);
         spawnEnemies = true;
+    }
+
+    public void addLevelPoints(float points){
+        levelPoints += points;
+        if(levelPoints >= levelMaxPoints){
+            endLevel(true);
+        }
+    }
+
+    // End the current level. If won == true, the player won. If false, player lost
+    public void endLevel(bool won){
+        spawnEnemies = false;
+        levelEnded = true;
     }
 }
