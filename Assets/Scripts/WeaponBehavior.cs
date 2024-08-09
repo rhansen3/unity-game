@@ -9,7 +9,7 @@ public class WeaponBehavior : MonoBehaviour
     public GameObject player;
     public GameObject Bullet_BasicGun;
     public GameObject Bullet_BasicMelee;
-    public Weapon equippedWeapon;
+    public int equippedWeaponID = -1;
     public bool canFire = true;
     public float xOffset = 0f;
     public float yOffset = 0f;
@@ -31,7 +31,6 @@ public class WeaponBehavior : MonoBehaviour
         if(player == null){
             player = GameObject.FindWithTag("Player");
         }
-        equippedWeapon = null;
     }
 
     // Functions for firing different kinds of weapons
@@ -39,6 +38,13 @@ public class WeaponBehavior : MonoBehaviour
         if(canFire){
             canFire = false;
             GameObject newBullet;
+            Weapon equippedWeapon;
+            if(equippedWeaponID == -1){
+                equippedWeapon = player.GetComponent<PlayerInventoryManager>().weaponList[0];
+            } else{
+                equippedWeapon = player.GetComponent<PlayerInventoryManager>().weaponList[equippedWeaponID];
+            }
+
             switch(equippedWeapon.fireFunction){
                 case "BasicMelee":
                     newBullet = Instantiate(Bullet_BasicMelee, transform.position + transform.up * equippedWeapon.bulletStartDistance, Quaternion.identity);
