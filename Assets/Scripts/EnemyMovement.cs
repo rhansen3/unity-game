@@ -6,7 +6,7 @@ public class EnemyMovement : MonoBehaviour
 {
 
     public GameObject player;
-    public float enemyspeed = 0.1f;
+    public float enemyspeed = 2f;
 
     void Start(){
         if(player == null){

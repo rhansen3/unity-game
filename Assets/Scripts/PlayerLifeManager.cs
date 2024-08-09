@@ -25,12 +25,12 @@ public class PlayerLifeManager : MonoBehaviour
         }
     }
 
-    void gainLife(){
+    public void gainLife(){
         lives++;
         uiCanvas.GetComponent<CanvasLifeManager>().gainLife();
     }
 
-    void loseLife(){
+    public void loseLife(){
         lives--;
         uiCanvas.GetComponent<CanvasLifeManager>().loseLife();
     }
