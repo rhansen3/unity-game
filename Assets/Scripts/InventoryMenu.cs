@@ -3,7 +3,7 @@ using UnityEngine.UIElements;
 
 public class InventoryMenu : MonoBehaviour
 {
-    private Button _button;
+    private Button _cycleWeaponsButton;
     private Label _equippedWeapons;
     private Label _inventoryList;
     public PlayerInventoryManager playerInventoryManager;
@@ -15,11 +15,11 @@ public class InventoryMenu : MonoBehaviour
         var uiDocument = GetComponent<UIDocument>();
 
         _equippedWeapons = uiDocument.rootVisualElement.Q("equippedWeapons") as Label;
-        _button = uiDocument.rootVisualElement.Q("cycleWeaponsButton") as Button;
+        _cycleWeaponsButton = uiDocument.rootVisualElement.Q("cycleWeaponsButton") as Button;
         _inventoryList = uiDocument.rootVisualElement.Q("inventoryList") as Label;
         printWeapons();
 
-        _button.RegisterCallback<ClickEvent>(cycleWeapons);
+        _cycleWeaponsButton.RegisterCallback<ClickEvent>(cycleWeapons);
     }
 
     private void cycleWeapons(ClickEvent evt)

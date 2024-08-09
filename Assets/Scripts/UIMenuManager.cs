@@ -65,7 +65,7 @@ public class UIMenuManager : MonoBehaviour
         player.GetComponent<PlayerShooting>().canFire = false;
     }
 
-    void unpauseGame(){
+    public void unpauseGame(){
         Time.timeScale = 1;
         gamePaused = false;
         player.GetComponent<PlayerShooting>().canFire = true;
