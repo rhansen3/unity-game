@@ -99,6 +99,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1680643103556134547}
   Bullet_BasicGun: {fileID: 7243384697389749894, guid: be1608d03217fbc48a94a2d2d1a9aa61, type: 3}
+  Bullet_BasicMelee: {fileID: 7243384697389749894, guid: 7a5273aefc874b74185ef1fa2fdab258, type: 3}
   equippedWeapon:
     id: 0
     name: Basic Gun
@@ -107,6 +108,7 @@ MonoBehaviour:
     bulletDamage: 10
     bulletStartDistance: 0.5
     fireFunction: BasicGun
+    maxSeconds: 0
   canFire: 1
   xOffset: 0
   yOffset: 0
@@ -151,7 +153,7 @@ Transform:
   - {fileID: 1317057878375552163}
   - {fileID: 6234813743263419995}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7120310436295890937
 SpriteRenderer:
@@ -348,6 +350,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4796e2fa6db134442ba91efa7979db1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponList: []
   Weapon1: {fileID: 7637314113895024506}
   Weapon2: {fileID: 7360373055009826789}
   Weapon3: {fileID: 1617233737681797836}
@@ -451,6 +454,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1680643103556134547}
   Bullet_BasicGun: {fileID: 7243384697389749894, guid: be1608d03217fbc48a94a2d2d1a9aa61, type: 3}
+  Bullet_BasicMelee: {fileID: 7243384697389749894, guid: 7a5273aefc874b74185ef1fa2fdab258, type: 3}
   equippedWeapon:
     id: 0
     name: Basic Gun
@@ -459,6 +463,7 @@ MonoBehaviour:
     bulletDamage: 10
     bulletStartDistance: 0.5
     fireFunction: BasicGun
+    maxSeconds: 0
   canFire: 1
   xOffset: 0
   yOffset: 0
@@ -741,6 +746,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1680643103556134547}
   Bullet_BasicGun: {fileID: 7243384697389749894, guid: be1608d03217fbc48a94a2d2d1a9aa61, type: 3}
+  Bullet_BasicMelee: {fileID: 7243384697389749894, guid: 7a5273aefc874b74185ef1fa2fdab258, type: 3}
   equippedWeapon:
     id: 0
     name: Basic Gun
@@ -749,6 +755,7 @@ MonoBehaviour:
     bulletDamage: 10
     bulletStartDistance: 0.5
     fireFunction: BasicGun
+    maxSeconds: 0
   canFire: 1
   xOffset: 0
   yOffset: 0
@@ -851,6 +858,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1680643103556134547}
   Bullet_BasicGun: {fileID: 7243384697389749894, guid: be1608d03217fbc48a94a2d2d1a9aa61, type: 3}
+  Bullet_BasicMelee: {fileID: 7243384697389749894, guid: 7a5273aefc874b74185ef1fa2fdab258, type: 3}
   equippedWeapon:
     id: 0
     name: Basic Gun
@@ -859,6 +867,7 @@ MonoBehaviour:
     bulletDamage: 10
     bulletStartDistance: 0.5
     fireFunction: BasicGun
+    maxSeconds: 0
   canFire: 1
   xOffset: 0
   yOffset: 0

@@ -8,6 +8,7 @@ public class WeaponBehavior : MonoBehaviour
 {
     public GameObject player;
     public GameObject Bullet_BasicGun;
+    public GameObject Bullet_BasicMelee;
     public Weapon equippedWeapon;
     public bool canFire = true;
     public float xOffset = 0f;
@@ -16,31 +17,41 @@ public class WeaponBehavior : MonoBehaviour
     [Serializable]
     public class Weapon
     {
-        public int id = 0;
-        public string name = "Basic Gun";
-        public float bulletSpeed = 10f;
-        public float fireRate = 0.3f;
-        public float bulletDamage = 10f;
-        public float bulletStartDistance = 0.5f;
-        public string fireFunction = "BasicGun";
+        public int id;
+        public string name;
+        public float bulletSpeed;
+        public float fireRate;
+        public float bulletDamage;
+        public float bulletStartDistance;
+        public string fireFunction;
+        public float maxSeconds;
     }
 
     void Start(){
         if(player == null){
             player = GameObject.FindWithTag("Player");
         }
+        equippedWeapon = null;
     }
 
     // Functions for firing different kinds of weapons
     public IEnumerator fireWeapon(){
         if(canFire){
             canFire = false;
+            GameObject newBullet;
             switch(equippedWeapon.fireFunction){
-                case "BasicGun":
-                    // Instantiate new bullet prefab and give it initial velocity
-                    GameObject newBullet = Instantiate(Bullet_BasicGun, transform.position + transform.up * equippedWeapon.bulletStartDistance, Quaternion.identity);
+                case "BasicMelee":
+                    newBullet = Instantiate(Bullet_BasicMelee, transform.position + transform.up * equippedWeapon.bulletStartDistance, Quaternion.identity);
                     newBullet.GetComponent<Rigidbody2D>().velocity = transform.up * equippedWeapon.bulletSpeed;
                     newBullet.GetComponent<PlayerBullet>().bulletDamage = equippedWeapon.bulletDamage;
+                    newBullet.GetComponent<PlayerBullet>().maxSeconds = equippedWeapon.maxSeconds;
+                    newBullet.transform.rotation = Quaternion.LookRotation(Vector3.forward, transform.up * equippedWeapon.bulletSpeed);
+                    break;
+                case "BasicGun":
+                    newBullet = Instantiate(Bullet_BasicGun, transform.position + transform.up * equippedWeapon.bulletStartDistance, Quaternion.identity);
+                    newBullet.GetComponent<Rigidbody2D>().velocity = transform.up * equippedWeapon.bulletSpeed;
+                    newBullet.GetComponent<PlayerBullet>().bulletDamage = equippedWeapon.bulletDamage;
+                    newBullet.GetComponent<PlayerBullet>().maxSeconds = equippedWeapon.maxSeconds;
                     break;
                 default:
                     Debug.LogError("Error: Invalid fireFunction.");

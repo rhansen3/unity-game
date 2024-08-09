@@ -6,8 +6,8 @@ using System;
 
 public class PlayerInventoryManager : MonoBehaviour
 {
-    // Dictionary for storing all weapons. int is the weapon ID
-    List<WeaponBehavior.Weapon> weaponList;
+    // List for storing all weapons. int is the weapon ID
+    public List<WeaponBehavior.Weapon> weaponList = new List<WeaponBehavior.Weapon>();
     
     // Each of the player's 4 guns
     public GameObject Weapon1;
@@ -17,9 +17,10 @@ public class PlayerInventoryManager : MonoBehaviour
 
     void Start(){
         readweaponList();
-        // TODO: CHANGE THIS TO melee default weapon
-        Weapon1.GetComponent<WeaponBehavior>().equippedWeapon = Weapon2.GetComponent<WeaponBehavior>().equippedWeapon = weaponList[0];
-        Weapon3.GetComponent<WeaponBehavior>().equippedWeapon = Weapon4.GetComponent<WeaponBehavior>().equippedWeapon = weaponList[1];
+        Weapon1.GetComponent<WeaponBehavior>().equippedWeapon =
+        Weapon2.GetComponent<WeaponBehavior>().equippedWeapon =
+        Weapon3.GetComponent<WeaponBehavior>().equippedWeapon =
+        Weapon4.GetComponent<WeaponBehavior>().equippedWeapon = weaponList[0];
     }
 
     [Serializable]

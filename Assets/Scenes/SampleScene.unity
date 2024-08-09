@@ -596,7 +596,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5137430097700574093, guid: fd6cc7479812758489bc21bd0bb3660d, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5280261414079503981, guid: fd6cc7479812758489bc21bd0bb3660d, type: 3}
       propertyPath: playerScore
@@ -663,6 +663,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8240657559033625, guid: aea716f16c52e834d90d9871c1e0e2e5, type: 3}
+      propertyPath: Bullet_BasicMelee
+      value: 
+      objectReference: {fileID: 7243384697389749894, guid: 7a5273aefc874b74185ef1fa2fdab258, type: 3}
     - target: {fileID: 1594478142115865853, guid: aea716f16c52e834d90d9871c1e0e2e5, type: 3}
       propertyPath: scoreUI
       value: 
@@ -715,6 +719,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2475783393989242964, guid: aea716f16c52e834d90d9871c1e0e2e5, type: 3}
+      propertyPath: Bullet_BasicMelee
+      value: 
+      objectReference: {fileID: 7243384697389749894, guid: 7a5273aefc874b74185ef1fa2fdab258, type: 3}
+    - target: {fileID: 2558538876843003293, guid: aea716f16c52e834d90d9871c1e0e2e5, type: 3}
+      propertyPath: Bullet_BasicMelee
+      value: 
+      objectReference: {fileID: 7243384697389749894, guid: 7a5273aefc874b74185ef1fa2fdab258, type: 3}
+    - target: {fileID: 4033493113393479419, guid: aea716f16c52e834d90d9871c1e0e2e5, type: 3}
+      propertyPath: Bullet_BasicMelee
+      value: 
+      objectReference: {fileID: 7243384697389749894, guid: 7a5273aefc874b74185ef1fa2fdab258, type: 3}
     - target: {fileID: 8474627897938024693, guid: aea716f16c52e834d90d9871c1e0e2e5, type: 3}
       propertyPath: uiCanvas
       value: 

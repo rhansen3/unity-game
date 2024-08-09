@@ -2,21 +2,33 @@
     "list": [
         {
             "id": 0,
+            "name": "Basic Melee",
+            "bulletSpeed": 15,
+            "fireRate": 0.3,
+            "bulletDamage": 8,
+            "bulletStartDistance": 0.5,
+            "fireFunction": "BasicMelee",
+            "maxSeconds": 0.3
+        },
+        {
+            "id": 1,
             "name": "Basic Gun",
             "bulletSpeed": 10,
             "fireRate": 0.3,
             "bulletDamage": 10,
             "bulletStartDistance": 0.5,
-            "fireFunction": "BasicGun"
+            "fireFunction": "BasicGun",
+            "maxSeconds": 5
         },
         {
-            "id": 1,
+            "id": 2,
             "name": "Pea Shooter",
             "bulletSpeed": 20,
             "fireRate": 0.1,
             "bulletDamage": 5,
             "bulletStartDistance": 0.5,
-            "fireFunction": "BasicGun"
+            "fireFunction": "BasicGun",
+            "maxSeconds": 5
         }
     ]
 }
