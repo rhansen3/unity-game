@@ -1,0 +1,1 @@
+A game created in Unity solely by me to practice both game development and C#. It is still a work in progress and the name is TBD. All code can be found in the Assets folder, specifically Assets/Scripts for most of the C# scripting.
