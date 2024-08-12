@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Keeps track of the player's ability to fire their weapons and controls firing of each of the 4 weapons
+
 public class PlayerShooting : MonoBehaviour
 {
     public bool canFire = true;

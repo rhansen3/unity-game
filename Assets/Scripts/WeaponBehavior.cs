@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 // A single of the player's 4 guns. Handles its own shooting when called by the player
+
 public class WeaponBehavior : MonoBehaviour
 {
     public GameObject player;

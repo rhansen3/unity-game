@@ -2,6 +2,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
+// Controls behavior of the win screen.
+
 public class WinScreen : MonoBehaviour
 {
     private Button _restartButton;

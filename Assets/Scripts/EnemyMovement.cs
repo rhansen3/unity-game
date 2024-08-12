@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Controls enemy movement. Constantly move them towards the player with a speed of enemySpeed.
+
 public class EnemyMovement : MonoBehaviour
 {
 
     public GameObject player;
-    public float enemyspeed = 2f;
+    public float enemySpeed = 2f;
 
     void Start(){
         if(player == null){
@@ -16,7 +18,7 @@ public class EnemyMovement : MonoBehaviour
 
     void FixedUpdate(){
         pointPlayer();
-        transform.position = Vector2.MoveTowards(transform.position, player.transform.position, enemyspeed * Time.fixedDeltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, player.transform.position, enemySpeed * Time.fixedDeltaTime);
     }
 
     // Point the enemy sprite towards the player

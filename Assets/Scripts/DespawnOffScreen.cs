@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// If the gameObject is not being rendered for timeToDespawn seconds straight, destroy it.
+
 public class DespawnOffScreen : MonoBehaviour
 {
     private float timeGone = 0f;

@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Controls the level. Spawns enemies when able to. Controls win and loss screens depending on state of level. Controls victory conditions.
+
 public class LevelManager : MonoBehaviour
 {
     public List<GameObject> enemyTypes;

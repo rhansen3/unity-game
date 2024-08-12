@@ -1,8 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement2D : MonoBehaviour
+// Controls the player's movement.
+
+public class PlayerMovement : MonoBehaviour
 {
 
     public float moveSpeed = 5f;

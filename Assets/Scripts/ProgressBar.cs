@@ -1,6 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+
+// Controls a progress bar. MaxVaule is the maximum value of the number to be tracked, 
+// other object must call changeProgressBarVal with the new value as it changes to keep progress bar updated.
 
 public class ProgressBar : MonoBehaviour
 {
@@ -17,12 +18,6 @@ public class ProgressBar : MonoBehaviour
         outerBarWidth = gameObject.GetComponent<RectTransform>().sizeDelta.x;
 
         changeProgressBarVal(0);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void changeProgressBarVal(float currentVal){

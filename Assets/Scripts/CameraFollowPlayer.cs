@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// gameObject follows player with a slight smoothing factor determined by followDelay
+
 public class CameraFollowPlayer : MonoBehaviour
 {
 

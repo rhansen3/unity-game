@@ -2,6 +2,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
+// Controls behavior of the loss screen.
+
 public class LossScreen : MonoBehaviour
 {
     private Button _restartButton;

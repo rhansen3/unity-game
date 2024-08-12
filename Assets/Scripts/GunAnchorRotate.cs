@@ -1,6 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+
+// Controls the anchors for player weapon rotation. Points them towards the mouse at all times.
 
 public class GunAnchorRotate : MonoBehaviour
 {

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
+// Controls behavior of enemies shooting. Fires bullet with a delay of fireRate towards the player.
+
 public class EnemyShoot : MonoBehaviour
 {
 

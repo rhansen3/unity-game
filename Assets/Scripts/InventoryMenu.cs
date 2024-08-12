@@ -1,6 +1,9 @@
 using UnityEngine;
 using UnityEngine.UIElements;
 
+// Controls the inventory menu. Prints currently equipped weapons as well as weapons in the inventory. 
+// Allows for changing of equipped weapons with ones from the inventory.
+
 public class InventoryMenu : MonoBehaviour
 {
     private Button _cycleWeaponsButton;

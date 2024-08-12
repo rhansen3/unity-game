@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
+// Controls player's lives. Keeps track of current life count, if player has lost their last life then ends the game.
+// Tells the UI to print life icons as needed.
+
 public class PlayerLifeManager : MonoBehaviour
 {
 

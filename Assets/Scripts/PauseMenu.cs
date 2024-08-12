@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.UIElements;
 
+// Controls behavior of the pause menu.
+
 public class PauseMenu : MonoBehaviour
 {
     private Button _resumeButton;

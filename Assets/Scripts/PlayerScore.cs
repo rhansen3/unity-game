@@ -3,20 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+// Keeps track of the player's score and prints it to the UI.
+
 public class PlayerScore : MonoBehaviour
 {
     public float score = 0f;
     public TMP_Text scoreUI;
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void addScore(float toAdd){
         score += toAdd;

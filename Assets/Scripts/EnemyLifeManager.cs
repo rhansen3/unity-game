@@ -1,7 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.PackageManager;
 using UnityEngine;
+
+// Controls the life of an enemy as well as both level and player score when the enemy is destroyed.
 
 public class EnemyLifeManager : MonoBehaviour
 {

@@ -156,7 +156,7 @@ Transform:
   - {fileID: 8972548860599759023}
   - {fileID: 1737718611430212073}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &49380562965524358
 MonoBehaviour:
@@ -173,6 +173,7 @@ MonoBehaviour:
   enemyTypes:
   - {fileID: 5137430097700574093, guid: fd6cc7479812758489bc21bd0bb3660d, type: 3}
   - {fileID: 5137430097700574093, guid: db9d5718125332a4b8731f710e3d42b0, type: 3}
+  spawnEnemies: 1
   enemySpawnDelay: 3
   player: {fileID: 0}
   mainCamera: {fileID: 0}
@@ -183,3 +184,4 @@ MonoBehaviour:
   levelPoints: 0
   winScreen: {fileID: 8376174542869009868}
   lossScreen: {fileID: 5765923971248213531}
+  levelProgressBar: {fileID: 0}

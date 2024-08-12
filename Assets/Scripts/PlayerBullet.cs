@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Controls behavior of the player's bullets. Adds score when hitting an enemy, destroys bullets if they live for a certain amount of time, 
+// and despawns bullet if they hit an enemy.
+
 public class PlayerBullet : MonoBehaviour
 {
 

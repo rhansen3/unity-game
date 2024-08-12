@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Controls behavior of enemy bullets. If they hit the player, player takes damage and the enemy bullet is destroyed. 
+// If they last for longer than timeAlive, destroy them to keep the game objects clean.
+
 public class EnemyBullet : MonoBehaviour
 {
     private float timeAlive = 0f;

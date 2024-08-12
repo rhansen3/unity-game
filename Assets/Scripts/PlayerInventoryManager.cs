@@ -5,6 +5,9 @@ using System.IO;
 using System;
 using System.Linq;
 
+// Controls the list of weapons as well as the inventory of the player. Loads in the weapon list from Assets/Data/Weapons.json 
+// and stores them in weaponList.
+
 public class PlayerInventoryManager : MonoBehaviour
 {
     // List for storing all weapons. int is the weapon ID

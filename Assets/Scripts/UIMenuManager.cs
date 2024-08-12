@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Controls UI menus. If player presses the corresponding buttons, open the inventory or pause menu.
+
 public class UIMenuManager : MonoBehaviour
 {
 
