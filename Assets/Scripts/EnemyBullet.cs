@@ -19,11 +19,6 @@ public class EnemyBullet : MonoBehaviour
         }
     }
 
-    void OnBecameInvisible()
-    {
-        Destroy(gameObject);
-    }
-
     private void OnTriggerEnter2D(Collider2D other){
         if(other.gameObject.tag == "Player"){
             other.GetComponent<PlayerLifeManager>().loseLife();

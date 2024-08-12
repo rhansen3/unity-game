@@ -6,7 +6,7 @@ using UnityEngine;
 public class LevelManager : MonoBehaviour
 {
     public List<GameObject> enemyTypes;
-    private bool spawnEnemies = true;
+    public bool spawnEnemies = true;
     public float enemySpawnDelay = 5f;
     public GameObject player;
     public Camera mainCamera;
