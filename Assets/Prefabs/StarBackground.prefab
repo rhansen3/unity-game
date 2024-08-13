@@ -4839,10 +4839,10 @@ ParentConstraint:
   m_Enabled: 1
   serializedVersion: 2
   m_Weight: 1
-  m_TranslationAtRest: {x: 15, y: 0, z: -1}
+  m_TranslationAtRest: {x: 15, y: 0, z: 0}
   m_RotationAtRest: {x: -90, y: 0, z: 0}
   m_TranslationOffsets:
-  - {x: 15, y: 0, z: 9}
+  - {x: 15, y: 0, z: 10}
   m_RotationOffsets:
   - {x: -90, y: 0, z: 0}
   m_AffectTranslationX: 1

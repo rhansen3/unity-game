@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 7810561098027776420}
   - component: {fileID: 4766445175261824306}
   - component: {fileID: 5280261414079503981}
+  - component: {fileID: 9028520822125442761}
+  - component: {fileID: 3911978750303090065}
   m_Layer: 0
   m_Name: BossEnemy
   m_TagString: Enemy
@@ -178,3 +180,33 @@ MonoBehaviour:
   spritesFlashMaterial: {fileID: 2100000, guid: 9812ae6a7216b1142877feaa5d6d292f, type: 2}
   damageFlashTime: 0.15
   levelPointsOnDeath: 100
+--- !u!114 &9028520822125442761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5137430097700574093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c44f950bda1a1fe4f960f061e6f3c7a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stationary: 0
+--- !u!114 &3911978750303090065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5137430097700574093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcbed813af5fa404690a0a989ec55fcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyBullet: {fileID: 7243384697389749894, guid: 95e19f1dd7130ae48a5a141dcfa7ce07, type: 3}
+  bossMovement: {fileID: 9028520822125442761}
+  player: {fileID: 0}
+  bulletStartDistance: 0.5
+  bulletSpeed: 5

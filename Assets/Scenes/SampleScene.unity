@@ -258,25 +258,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: BossEnemy
       objectReference: {fileID: 0}
-    - target: {fileID: 6252161682804435691, guid: 50e3bef30d5b9724293d94ce5f9615fb, type: 3}
-      propertyPath: m_TranslationAtRest.x
-      value: -3.8732235
-      objectReference: {fileID: 0}
-    - target: {fileID: 6252161682804435691, guid: 50e3bef30d5b9724293d94ce5f9615fb, type: 3}
-      propertyPath: m_TranslationAtRest.y
-      value: 0.016336739
-      objectReference: {fileID: 0}
     - target: {fileID: 7040090267234728877, guid: 50e3bef30d5b9724293d94ce5f9615fb, type: 3}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7040090267234728877, guid: 50e3bef30d5b9724293d94ce5f9615fb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.8732235
+      value: -5.56
       objectReference: {fileID: 0}
     - target: {fileID: 7040090267234728877, guid: 50e3bef30d5b9724293d94ce5f9615fb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.016336739
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7040090267234728877, guid: 50e3bef30d5b9724293d94ce5f9615fb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -515,7 +507,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7665510947314116083, guid: eab5f5559580d6a40963d3f4cf522837, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7665510947314116083, guid: eab5f5559580d6a40963d3f4cf522837, type: 3}
       propertyPath: m_LocalRotation.w
@@ -763,10 +755,6 @@ PrefabInstance:
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 519420031}
-    - target: {fileID: 49380562965524358, guid: 3af643ed2272ecf44ae91db6ecdf4f2a, type: 3}
-      propertyPath: spawnEnemies
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 49380562965524358, guid: 3af643ed2272ecf44ae91db6ecdf4f2a, type: 3}
       propertyPath: uiMenuManager
       value: 
