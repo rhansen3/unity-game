@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.59607846, g: 0.59607846, b: 0.59607846, a: 1}
+  m_Color: {r: 0.32156864, g: 0.32156864, b: 0.32156864, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -100,15 +100,7 @@ MonoBehaviour:
   player: {fileID: 1680643103556134547}
   Bullet_BasicGun: {fileID: 7243384697389749894, guid: be1608d03217fbc48a94a2d2d1a9aa61, type: 3}
   Bullet_BasicMelee: {fileID: 7243384697389749894, guid: 7a5273aefc874b74185ef1fa2fdab258, type: 3}
-  equippedWeapon:
-    id: 0
-    name: Basic Gun
-    bulletSpeed: 10
-    fireRate: 0.3
-    bulletDamage: 10
-    bulletStartDistance: 0.5
-    fireFunction: BasicGun
-    maxSeconds: 0
+  equippedWeaponID: -1
   canFire: 1
   xOffset: 0
   yOffset: 0
@@ -123,12 +115,12 @@ GameObject:
   - component: {fileID: 2077326502601103384}
   - component: {fileID: 7120310436295890937}
   - component: {fileID: 3597803248269490669}
-  - component: {fileID: 197700199240101312}
   - component: {fileID: 3927895263846671799}
   - component: {fileID: 9189048363442037192}
   - component: {fileID: 8474627897938024693}
   - component: {fileID: 1594478142115865853}
   - component: {fileID: 5464871586142065193}
+  - component: {fileID: 8528230148253283216}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -153,7 +145,7 @@ Transform:
   - {fileID: 1317057878375552163}
   - {fileID: 6234813743263419995}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7120310436295890937
 SpriteRenderer:
@@ -196,8 +188,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8073f2840f20ad14695aca34d7f3f0bd, type: 3}
-  m_Color: {r: 0.26415092, g: 0.26415092, b: 0.26415092, a: 1}
+  m_Sprite: {fileID: 21300000, guid: fc24cba8d88a97746ab9798db68cac03, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -234,51 +226,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &197700199240101312
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1680643103556134547}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!114 &3927895263846671799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -324,6 +271,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lives: 3
   uiCanvas: {fileID: 0}
+  levelManager: {fileID: 0}
 --- !u!114 &1594478142115865853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -351,10 +299,46 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponList: []
+  inventory: 
   Weapon1: {fileID: 7637314113895024506}
   Weapon2: {fileID: 7360373055009826789}
   Weapon3: {fileID: 1617233737681797836}
   Weapon4: {fileID: 1699673880332431105}
+--- !u!58 &8528230148253283216
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680643103556134547}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.18
 --- !u!1 &1699673880332431105
 GameObject:
   m_ObjectHideFlags: 0
@@ -430,7 +414,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.59607846, g: 0.59607846, b: 0.59607846, a: 1}
+  m_Color: {r: 0.3207547, g: 0.3207547, b: 0.3207547, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -455,15 +439,7 @@ MonoBehaviour:
   player: {fileID: 1680643103556134547}
   Bullet_BasicGun: {fileID: 7243384697389749894, guid: be1608d03217fbc48a94a2d2d1a9aa61, type: 3}
   Bullet_BasicMelee: {fileID: 7243384697389749894, guid: 7a5273aefc874b74185ef1fa2fdab258, type: 3}
-  equippedWeapon:
-    id: 0
-    name: Basic Gun
-    bulletSpeed: 10
-    fireRate: 0.3
-    bulletDamage: 10
-    bulletStartDistance: 0.5
-    fireFunction: BasicGun
-    maxSeconds: 0
+  equippedWeaponID: -1
   canFire: 1
   xOffset: 0
   yOffset: 0
@@ -722,7 +698,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.59607846, g: 0.59607846, b: 0.59607846, a: 1}
+  m_Color: {r: 0.32156864, g: 0.32156864, b: 0.32156864, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -747,15 +723,7 @@ MonoBehaviour:
   player: {fileID: 1680643103556134547}
   Bullet_BasicGun: {fileID: 7243384697389749894, guid: be1608d03217fbc48a94a2d2d1a9aa61, type: 3}
   Bullet_BasicMelee: {fileID: 7243384697389749894, guid: 7a5273aefc874b74185ef1fa2fdab258, type: 3}
-  equippedWeapon:
-    id: 0
-    name: Basic Gun
-    bulletSpeed: 10
-    fireRate: 0.3
-    bulletDamage: 10
-    bulletStartDistance: 0.5
-    fireFunction: BasicGun
-    maxSeconds: 0
+  equippedWeaponID: -1
   canFire: 1
   xOffset: 0
   yOffset: 0
@@ -834,7 +802,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.5943396, g: 0.5943396, b: 0.5943396, a: 1}
+  m_Color: {r: 0.32156864, g: 0.32156864, b: 0.32156864, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -859,15 +827,7 @@ MonoBehaviour:
   player: {fileID: 1680643103556134547}
   Bullet_BasicGun: {fileID: 7243384697389749894, guid: be1608d03217fbc48a94a2d2d1a9aa61, type: 3}
   Bullet_BasicMelee: {fileID: 7243384697389749894, guid: 7a5273aefc874b74185ef1fa2fdab258, type: 3}
-  equippedWeapon:
-    id: 0
-    name: Basic Gun
-    bulletSpeed: 10
-    fireRate: 0.3
-    bulletDamage: 10
-    bulletStartDistance: 0.5
-    fireFunction: BasicGun
-    maxSeconds: 0
+  equippedWeaponID: -1
   canFire: 1
   xOffset: 0
   yOffset: 0

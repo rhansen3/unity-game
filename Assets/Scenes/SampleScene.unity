@@ -196,7 +196,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 7
+  orthographic size: 12
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -421,12 +421,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2537410851848991031, guid: eab5f5559580d6a40963d3f4cf522837, type: 3}
+      propertyPath: m_TranslationAtRest.x
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 2537410851848991031, guid: eab5f5559580d6a40963d3f4cf522837, type: 3}
+      propertyPath: m_TranslationOffsets.Array.data[0].x
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 2537410851848991031, guid: eab5f5559580d6a40963d3f4cf522837, type: 3}
       propertyPath: m_Sources.Array.data[0].sourceTransform
       value: 
       objectReference: {fileID: 519420032}
     - target: {fileID: 2855786374947326654, guid: eab5f5559580d6a40963d3f4cf522837, type: 3}
       propertyPath: m_Name
       value: StarBackground
+      objectReference: {fileID: 0}
+    - target: {fileID: 7634424065258141523, guid: eab5f5559580d6a40963d3f4cf522837, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 7634424065258141523, guid: eab5f5559580d6a40963d3f4cf522837, type: 3}
       propertyPath: moveWithCustomTransform
@@ -438,7 +450,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7665510947314116083, guid: eab5f5559580d6a40963d3f4cf522837, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 15
+      value: 26
       objectReference: {fileID: 0}
     - target: {fileID: 7665510947314116083, guid: eab5f5559580d6a40963d3f4cf522837, type: 3}
       propertyPath: m_LocalPosition.y
