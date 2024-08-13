@@ -20,6 +20,7 @@ public class BossAttack : MonoBehaviour
     private float tripleAttackSecondaryAngle = 20f;
     private float timeBetweenTripleShots = 0.75f;
     private float circleShotWait = 0.25f;
+    public float initialSpawnDelay = 3f;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +31,7 @@ public class BossAttack : MonoBehaviour
         if(player == null){
             player = GameObject.FindWithTag("Player");
         }
+        StartCoroutine(waitToFire());
     }
 
     // Update is called once per frame
@@ -91,5 +93,10 @@ public class BossAttack : MonoBehaviour
             GameObject newEnemyBullet = Instantiate(enemyBullet, transform.position + shootVec * bulletStartDistance, Quaternion.identity);
             newEnemyBullet.GetComponent<Rigidbody2D>().velocity = bulletSpeed * shootVec;
         }
+    }
+
+    private IEnumerator waitToFire(){
+        yield return new WaitForSeconds(initialSpawnDelay);
+        canAttack = true;
     }
 }

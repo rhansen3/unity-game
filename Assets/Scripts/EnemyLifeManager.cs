@@ -13,8 +13,9 @@ public class EnemyLifeManager : MonoBehaviour
     public float damageFlashTime = 0.15f;
     private float flashTimeStart;
     private bool flashingDamage = false;
-    LevelManager levelManager;
+    protected LevelManager levelManager;
     public float levelPointsOnDeath = 5f;
+    public int enemyDictID = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -49,9 +50,10 @@ public class EnemyLifeManager : MonoBehaviour
         }
     }
 
-    public void enemyDeath(){
+    public virtual void enemyDeath(){
         playerScore.addScore(enemyDeathScore);
         levelManager.addLevelPoints(levelPointsOnDeath);
+        levelManager.enemyDict.Remove(enemyDictID);
         Destroy(gameObject);
     }
 

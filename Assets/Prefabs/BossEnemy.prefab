@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6018229740966677071}
   - component: {fileID: 7810561098027776420}
   - component: {fileID: 4766445175261824306}
-  - component: {fileID: 5280261414079503981}
+  - component: {fileID: -2602593030730852371}
   - component: {fileID: 9028520822125442761}
   - component: {fileID: 3911978750303090065}
   m_Layer: 0
@@ -161,7 +161,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &5280261414079503981
+--- !u!114 &-2602593030730852371
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -170,16 +170,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 5137430097700574093}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aed1b5a235814c04e8ca4f203a830b83, type: 3}
+  m_Script: {fileID: 11500000, guid: d5365324eb74e0747af057319d6b4d4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyHealth: 1500
+  enemyHealth: 750
   enemyDeathScore: 10000
   playerScore: {fileID: 0}
   spritesDefaultMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   spritesFlashMaterial: {fileID: 2100000, guid: 9812ae6a7216b1142877feaa5d6d292f, type: 2}
   damageFlashTime: 0.15
   levelPointsOnDeath: 100
+  enemyDictID: 0
 --- !u!114 &9028520822125442761
 MonoBehaviour:
   m_ObjectHideFlags: 0
